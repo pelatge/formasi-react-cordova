@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.formasi.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>formasi</name>
+    <description>aplikasi resmi organisasi formasi</description>
+    <icon src="www/logo/formasi.png" />
+    <author email="formasi52263@gmail.com" href="https://formasi52263.blogspot.com">
+        formasi Team
+    </author>
+    <content src="index.html" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <platform name="android">
+    <preference name="AndroidWindowSplashScreenAnimatedIcon" value="res/screen/android/formasi.png" />
+    </platform>
+    
+</widget>
