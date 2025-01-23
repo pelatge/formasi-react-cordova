@@ -12,7 +12,9 @@ function Kontak(p:any){
     <div className=" max-w-sm mx-auto my-auto p-4 md:max-w-xl space-y-4" key={p.id}>
 
     {p.divisi}
+    <p>
     {p.sub}
+    </p>
     <Card
       className="max-w-sm"
       imgAlt="Apple Watch Series 7 in colors pink, silver, and black"
