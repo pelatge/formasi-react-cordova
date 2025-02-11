@@ -14,12 +14,18 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "cordova-android": "^13.0.0",
-    "cordova-browser": "^7.0.0"
+    "cordova-browser": "^7.0.0",
+    "cordova-custom-config": "^5.1.1",
+    "cordova-plugin-inappbrowser": "^6.0.0"
   },
   "cordova": {
     "platforms": [
       "android",
       "browser"
-    ]
+    ],
+    "plugins": {
+      "cordova-plugin-inappbrowser": {},
+      "cordova-custom-config": {}
+    }
   }
 }

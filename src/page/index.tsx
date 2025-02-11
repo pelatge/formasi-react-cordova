@@ -1,3 +1,5 @@
 export {TentangFormasi} from './Tentang'
 export {KontakFormasi} from './Kontak'
 export {BerandaFormasi} from './Beranda'
+export {ImagePengurus}  from './Pengurus'
+export {ImageKeputusan} from './Keputusan'

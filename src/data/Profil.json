@@ -1,0 +1,7 @@
+[
+	{id:1,nama:"Tarboim",divisi:"Seksi Bidang Sosial dan Kepemudaan ",sub:"",handphone:"083169327281",foto:"tarboim.jpg"},
+	{id:2,nama:"Rasto",divisi:"Seksi Bidang Ekonomi dan Usaha ",sub:"Pinjaman",handphone:"083170717067",foto:"rasto.jpg"},
+	{id:3,nama:"Taswan",divisi:"Seksi Bidang Ekonomi dan Usaha ",sub:"Pinjaman",handphone:"08310000000",foto:"taswan.jpg"},
+	{id:4,nama:"Casmin",divisi:"Seksi Hubungan Masyarakat",sub:"",handphone:"083128629005",foto:"tarboim.jpg"},
+	{id:5,nama:"Doyok",divisi:"Seksi Bidang Ekonomi dan Usaha ",sub:"Arisan",handphone:"08310000000",foto:"doyok.jpg"}
+]

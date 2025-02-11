@@ -1,1 +1,1 @@
-export {CallPhone} from './Call'
+export {CallPhone,CallNumber} from './Call'

@@ -3,7 +3,7 @@ import {HashRouter,Routes, Route} from 'react-router-dom';
 
 import {formats} from './../data'
 
-function Image(n:any){
+function Image(){
 	return(
 	<div>
 		<img src="/doc/`${n.doc}" />
@@ -54,3 +54,7 @@ export function BerandaFormasi(){
 	</div>
 	);
 }
+
+
+  <Route path="/keputusan" element={<ImagePengurus />} />
+  <Route path="/pengurus" element={<ImageKeputusan />} />

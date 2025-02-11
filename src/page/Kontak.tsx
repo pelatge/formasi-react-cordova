@@ -3,36 +3,42 @@ import {
   profils
 } from './../data'
 
+//import profils from './../data/Profil.json'
 import {
-  CallPhone
+  CallNumber
 } from './../utils'
 
 function Kontak(p:any){
+    const folder = '/foto/'
+    const telpon = 'tel :' + p.handphone
+
     return(
     <div className=" max-w-sm mx-auto my-auto p-4 md:max-w-xl space-y-4" key={p.id}>
-
-    {p.divisi}
-    <p>
-    {p.sub}
-    </p>
     <Card
       className="max-w-sm"
-      imgAlt="Apple Watch Series 7 in colors pink, silver, and black"
-      imgSrc="/logo/formasi.jpg"
+      imgAlt="Pengurus formasi"
+      imgSrc={folder + p.foto}
     >
-      <a href="#">
-        <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
+      <p>
+        <h2 className="text-xl font-semibold tracking-tight text-center text-gray-900 dark:text-white">
           {p.nama}
-        </h5>
-      </a>
+        </h2>
+      </p>
+
+      <p className="text-sm font-semibold tracking-tight text-gray-900 text-center dark:text-white">
+        {p.divisi}
+      </p>    
+      <p className="bg-red-500 text-xl font-semibold tracking-tight text-gray-900 text-center dark:text-white">
+        {p.sub}
+      </p>
       <div className="flex items-center justify-between">
         <span className="text-sm font-bold text-gray-900 dark:text-white">{p.handphone}</span>
-        <a
-          href="tel:`${()=>CallPhone(p.handphone,'_system') | p.handphone}`"
+        <button
+          onClick = {()=>CallNumber(p.handphone) }
           className="rounded-lg bg-cyan-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-cyan-800 focus:outline-none focus:ring-4 focus:ring-cyan-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800"
         >
           Panggil
-        </a>
+        </button>
       </div>
     </Card>
    </div>

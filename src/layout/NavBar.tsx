@@ -17,7 +17,9 @@ import {useState} from 'react'
 import {
   BerandaFormasi,
   TentangFormasi,
-  KontakFormasi
+  KontakFormasi,
+  ImagePengurus,
+  ImageKeputusan
 } from './../page'
 
 
@@ -46,14 +48,14 @@ export function NavbarFormasi() {
           }
         >
           <DropdownHeader>
-            <span className="block text-sm">Bonnie Green</span>
-            <span className="block truncate text-sm font-medium">name@flowbite.com</span>
+            <span className="block text-sm">FORMASI</span>
+            <span className="block truncate text-sm font-medium">formasi52263@gmail.com</span>
           </DropdownHeader>
           <DropdownItem>Dashboard</DropdownItem>
-          <DropdownItem>Settings</DropdownItem>
-          <DropdownItem>Earnings</DropdownItem>
+          <DropdownItem>Pengaturan</DropdownItem>
+          <DropdownItem>Info</DropdownItem>
           <DropdownDivider />
-          <DropdownItem>Sign out</DropdownItem>
+          <DropdownItem>Keluar</DropdownItem>
         </Dropdown>
         <NavbarToggle />
       </div>
@@ -75,10 +77,12 @@ export function NavbarFormasi() {
     {/*Routing */}
     <Routes>
         
-        <Route path="/" element={<BerandaFormasi />} />
+        <Route path="/"  element={<BerandaFormasi />} />
         <Route path="/tentang" element={<TentangFormasi />} />
         <Route path="/kontak" element={<KontakFormasi />} />
-      
+        <Route path="/pengurus" element={<ImagePengurus />} />
+        <Route path="/keputusan" element={<ImageKeputusan />} />
+
     </Routes>
     </HashRouter>
 
