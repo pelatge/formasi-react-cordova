@@ -9,7 +9,7 @@ interface IProps {
 
 function App(props: React.PropsWithChildren<IProps>): React.ReactNode  {
   return (
-    <div className="container mx-auto bg-cyan-500 ">
+    <div className="container mx-auto bg-blue-400 ">
       <NavbarFormasi />
       {props.children}
       <FooterFormasi />

@@ -1,10 +1,29 @@
-import {Card,Button} from "flowbite-react"
+import {Card,Button,Carousel,Tooltip} from "flowbite-react"
 import {Link} from 'react-router-dom';
 import {useState} from 'react'
 
-import {formats} from './../data'
+import {formats,profils} from './../data'
 
+function Img(p:any){
+	const folder = '/foto/'
+	return(	
+		<div key={p.id}>
+			<Tooltip content={p.nama}>
+			<img src={folder + p.foto} alt={p.nama} />
+			</Tooltip>
+		</div>)
+}
 
+function CarouselFormasi() {
+	
+  return (
+    <div className="h-56 sm:h-64 xl:h-80 2xl:h-96 " >
+      <Carousel>
+        {profils.map(Img)}
+      </Carousel>
+    </div>
+  );
+}
 
 
 
@@ -25,15 +44,14 @@ function Beranda(p:any){
 	return(
 
 	<div className=" max-w-sm mx-auto my-auto p-1 md:max-w-xl space-y-4 " key={p.id}>
-		<Card className="max-w-sm" imgSrc="/logo/formasi.jpg" horizontal>
-	      <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-	        {p.details}
+		<Card >
+	      <h5 className="text-2xl text-center font-bold tracking-tight text-gray-900 dark:text-white">
+	        {p.details.toUpperCase()}
 	      </h5>
-	      <p className="font-normal text-gray-700 dark:text-gray-400">
-	       <Button as={Link} to ={ p.format.replace(/.jpg/g, "") }  color="blue" onClick={()=>ClickLink(nameLink)}>
-	       Klik Disini
-	       </Button>
-	      </p>
+	      <Button as={Link} to ={ p.format.replace(/.jpg/g, "") }  outline gradientDuoTone="purpleToBlue" onClick={()=>ClickLink(nameLink)}>
+	       { p.format.replace(/.jpg/g, "") }
+	      </Button>
+	      
 	    </Card>
 	    
 	</div>
@@ -42,8 +60,11 @@ function Beranda(p:any){
 
 export function BerandaFormasi(){
 	return(
-	<div>
+	<div className="max-w-sm mx-auto my-auto p-1 md:max-w-xl space-y-4">
+		<CarouselFormasi />
+	  <div id="content">
 		{formats.map(Beranda)}
+		</div>
 	</div>
 	)
 }

@@ -7,7 +7,7 @@ export function TentangFormasi() {
       <AccordionPanel>
         <AccordionTitle>Apa itu FORMASI?</AccordionTitle>
         <AccordionContent>
-          <p className="mb-2 text-grey-500 dark:text-white-400">
+          <p className="mb-2 text-white-500 dark:text-white-400">
             FORMASI adalah organisasi kemasyarakatan yang didirikan oleh para perantau asli desa Tanggungsari kecamatan ketanggungan kabupaten brebes yang berada di Lampung.
           </p>
           <p className="text-white-500 dark:text-white-400">

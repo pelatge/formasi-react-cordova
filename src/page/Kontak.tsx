@@ -10,7 +10,7 @@ import {
 
 function Kontak(p:any){
     const folder = '/foto/'
-    const telpon = 'tel :' + p.handphone
+    //const telpon = 'tel :' + p.handphone
 
     return(
     <div className=" max-w-sm mx-auto my-auto p-4 md:max-w-xl space-y-4" key={p.id}>
