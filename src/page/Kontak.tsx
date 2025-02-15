@@ -1,27 +1,25 @@
 import { Card } from "flowbite-react";
-import {
-  profils
-} from './../data'
 
-//import profils from './../data/Profil.json'
-import {
-  CallNumber
-} from './../utils'
+
+import {Profil} from './../datatype'
+import {useJsonFetch} from './../hooks'
+import { CallNumber } from './../utils'
+
 
 function Kontak(p:any){
-    const folder = '/foto/'
-    //const telpon = 'tel :' + p.handphone
-
+    
+    const foto = '/foto/'+p.foto+'.png'
+   
     return(
     <div className=" max-w-sm mx-auto my-auto p-4 md:max-w-xl space-y-4" key={p.id}>
     <Card
       className="max-w-sm"
       imgAlt="Pengurus formasi"
-      imgSrc={folder + p.foto}
+      imgSrc={foto}
     >
       <p>
         <h2 className="text-xl font-semibold tracking-tight text-center text-gray-900 dark:text-white">
-          {p.nama}
+          {p.nama.toUpperCase()}
         </h2>
       </p>
 
@@ -48,9 +46,14 @@ function Kontak(p:any){
 }
 
 export function KontakFormasi() {
+  const   Url = '/data/Profil.json'
+  const { KontakFormasi, loading, error } = useJsonFetch<Profil[]>(Url);
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error}</div>;
+
   return (
     <div>
-    {profils.map(Kontak)}
+    {kontak.map(Kontak)}
     </div>
   )
 

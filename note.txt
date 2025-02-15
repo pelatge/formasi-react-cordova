@@ -111,3 +111,53 @@ export function BerandaFormasi(){
 	</div>
 	)
 }
+
+
+// react component
+
+// src/components/UserComponent.tsx
+import { useEffect, useState } from 'react';
+import AppDataSource from '../db/dataSource';
+import { User } from '../entities/User';
+
+export function UserComponent() {
+  const [users, setUsers] = useState<User[]>([]);
+  const [newUser, setNewUser] = useState<Partial<User>>({});
+
+  useEffect(() => {
+    const initializeDB = async () => {
+      await AppDataSource.initialize();
+      const users = await AppDataSource.manager.find('User');
+      setUsers(users);
+    };
+    
+    initializeDB();
+  }, []);
+
+  const addUser = async () => {
+    await AppDataSource.manager.save('User', newUser);
+    const updatedUsers = await AppDataSource.manager.find('User');
+    setUsers(updatedUsers);
+  };
+
+  return (
+    <div>
+      <input 
+        placeholder="Name" 
+        onChange={(e) => setNewUser({...newUser, name: e.target.value})}
+      />
+      <input
+        placeholder="Email"
+        onChange={(e) => setNewUser({...newUser, email: e.target.value})}
+      />
+      <button onClick={addUser}>Add User</button>
+
+      <h2>User List:</h2>
+      <ul>
+        {users.map(user => (
+          <li key={user.id}>{user.name} - {user.email}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}

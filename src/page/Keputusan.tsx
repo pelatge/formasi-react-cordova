@@ -1,7 +1,14 @@
+import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
+
+
 export function ImageKeputusan(){
 	return(
+	<TransformWrapper>
 	<div className="container">
-		<img src="/doc/keputusan.jpg" />
+		 <TransformComponent>
+			<img src="/doc/keputusan.jpg" />
+		 </TransformComponent>
 	</div>
+	</TransformWrapper>
  )
 }
