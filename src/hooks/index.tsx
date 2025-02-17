@@ -12,6 +12,7 @@ export function useJsonFetch<T>(url: string) {
         const response = await fetch(url);
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         const jsonData: T = await response.json();
+        
         setData(jsonData);
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Unknown error');

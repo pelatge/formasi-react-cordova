@@ -8,8 +8,8 @@ import { CallNumber } from './../utils'
 
 function Kontak(p:any){
     
-    const foto = '/foto/'+p.foto+'.png'
-   
+    const foto = '/foto/'+p.foto
+
     return(
     <div className=" max-w-sm mx-auto my-auto p-4 md:max-w-xl space-y-4" key={p.id}>
     <Card
@@ -41,19 +41,19 @@ function Kontak(p:any){
     </Card>
    </div>
 
-      )   
+  )   
        
 }
 
 export function KontakFormasi() {
-  const   Url = '/data/Profil.json'
-  const { KontakFormasi, loading, error } = useJsonFetch<Profil[]>(Url);
+  const   Url = '/data/Kontak.json'
+  const { data : kontaks, loading, error } = useJsonFetch<Profil[]>(Url);
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
 
   return (
     <div>
-    {kontak.map(Kontak)}
+    {kontaks?.map(Kontak)}
     </div>
   )
 

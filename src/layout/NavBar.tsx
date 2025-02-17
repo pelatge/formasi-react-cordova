@@ -10,7 +10,6 @@ import {
   NavbarLink,
   NavbarToggle
 } from "flowbite-react";
-
 import {HashRouter,Routes, Route,Link} from 'react-router-dom';
 import {useState} from 'react'
 
@@ -18,6 +17,7 @@ import {
   BerandaFormasi,
   TentangFormasi,
   KontakFormasi,
+  AlbumFormasi,
   ImagePengurus,
   ImageKeputusan
 } from './../page'
@@ -66,6 +66,9 @@ export function NavbarFormasi() {
         <NavbarLink to="/tentang"  as={Link} active={activeLink === '/tentang' ? true : false} onClick={() => handleClick('/tentang')}>
           Tentang 
         </NavbarLink>
+        <NavbarLink to="/album"  as={Link} active={activeLink === '/album' ? true: false} onClick={() => handleClick('/album')}>
+          Team
+        </NavbarLink>
         <NavbarLink to="/kontak"  as={Link} active={activeLink === '/kontak' ? true: false} onClick={() => handleClick('/kontak')}>
           Kontak
         </NavbarLink>
@@ -80,6 +83,7 @@ export function NavbarFormasi() {
         <Route path="/"  element={<BerandaFormasi />} />
         <Route path="/tentang" element={<TentangFormasi />} />
         <Route path="/kontak" element={<KontakFormasi />} />
+        <Route path="/Album" element={<AlbumFormasi />} />
         <Route path="/pengurus" element={<ImagePengurus />} />
         <Route path="/keputusan" element={<ImageKeputusan />} />
 

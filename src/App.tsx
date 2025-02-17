@@ -1,8 +1,7 @@
-import { getRepository } from "typeorm";
-import "reflect-metadata"
-import { initializeDB } from './database';
-import AppDataSource from '../database/dataSource';
-import { User } from '../entities/user';
+// import { getRepository } from "typeorm";
+// import { initializeDB } from './database';
+// import AppDataSource from '../database/dataSource';
+// import { User } from '../entities/user';
 import {
   NavbarFormasi,
   FooterFormasi

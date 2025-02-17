@@ -20,8 +20,10 @@
     "cordova-web": "pnpm build && pnpm clear-cordova && pnpm copy-to-cordova && pnpm cordova-run-web"
   },
   "dependencies": {
+    "dayjs": "^1.11.13",
     "flowbite-react": "^0.8.0",
     "history": "^5.3.0",
+    "id": "link:dayjs/locale/id",
     "localforage": "^1.10.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -53,7 +55,8 @@
   },
   "pnpm": {
     "onlyBuiltDependencies": [
-      "sqlite3"
+      "sqlite3",
+      "daysjs"
     ]
   }
 }
