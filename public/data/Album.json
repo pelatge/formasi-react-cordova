@@ -8,7 +8,7 @@
     },
     {
         "id": 2,
-        "nama": "Muhammad Hidayatulloh",
+        "nama": "M.Hidayat",
         "status":"pengurus",
         "handphone": "083170717067",
         "foto": "dayat.png"
@@ -141,79 +141,73 @@
      },
      {
         "id": 21,
-        "nama": "Doyok",
+        "nama": "Risman",
         "status":"",
         "handphone": "08310000000",
         "foto": "doyok.png"
      },
      {
         "id": 22,
-        "nama": "Doyok",
+        "nama": "Arisman",
         "status":"",
         "handphone": "08310000000",
         "foto": "doyok.png"
      },
      {
         "id": 23,
-        "nama": "Doyok",
+        "nama": "Rokhman",
         "status":"",
         "handphone": "08310000000",
         "foto": "doyok.png"
      },
      {
         "id": 24,
-        "nama": "Doyok",
+        "nama": "Nurkadi",
         "status":"",
         "handphone": "08310000000",
         "foto": "doyok.png"
      },
      {
         "id": 25,
-        "nama": "Doyok",
+        "nama": "Sar'an",
         "status":"",
         "handphone": "08310000000",
         "foto": "doyok.png"
      },
      {
         "id": 26,
-        "nama": "Doyok",
+        "nama": "Slamet",
         "status":"",
         "handphone": "08310000000",
         "foto": "doyok.png"
      },
      {
         "id": 27,
-        "nama": "Doyok",
+        "nama": "Sudarsono",
         "status":"",
         "handphone": "08310000000",
         "foto": "doyok.png"
      },
      {
         "id": 28,
-        "nama": "Doyok",
+        "nama": "Tarwin",
         "status":"",
         "handphone": "08310000000",
         "foto": "doyok.png"
      },
      {
         "id": 29,
-        "nama": "Doyok",
+        "nama": "Dahlan",
         "status":"",
         "handphone": "08310000000",
         "foto": "doyok.png"
      },
      {
         "id": 30,
-        "nama": "Doyok",
-        "status":"",
-        "handphone": "08310000000",
-        "foto": "doyok.png"
-     },
-     {
-        "id": 31,
-        "nama": "Doyok",
+        "nama": "Riko",
         "status":"",
         "handphone": "08310000000",
         "foto": "doyok.png"
      }
+
 ]
